@@ -1,0 +1,24 @@
+name: Deploy to Amazon EC2 ci-cd-aula
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+
+    - name: Deploy to Server ci-cd-aula
+      uses: easingthemes/ssh-deploy@main
+      env:
+        SSH_PRIVATE_KEY: ${ { secrets.EC2_SSH_KEY }}
+        REMOTE_HOST: ${ { secrets.HOST_DNS }}
+        REMOTE_USER: ${ { secrets.USERNAME }}
+        TARGET: ${ { secrets.TARGET_DIR }}
+
+    
