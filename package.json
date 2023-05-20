@@ -1,0 +1,22 @@
+{
+  "name": "todo-list",
+  "version": "1.0.0",
+  "description": "api para testes de ci/cd",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/prof-holanda/todo-list.git"
+  },
+  "author": "Bruno R. Holanda <rf1792@ucdb.br>",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/prof-holanda/todo-list/issues"
+  },
+  "homepage": "https://github.com/prof-holanda/todo-list#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
